@@ -1,4 +1,5 @@
-#🌿 Plants Marketplace
+# 🌿 Plants Marketplace
+
 Plants Marketplace is an e-commerce web application designed for buying and selling plants, plant care products, and gardening tools. This platform connects plant enthusiasts with vendors, offering a diverse range of plant species, seeds, and eco-friendly gardening supplies.
 
 Features
