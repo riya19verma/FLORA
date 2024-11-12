@@ -7,7 +7,6 @@
 - [What’s Flora?](#whats-flora)
 - [Why We’re Cool](#why-were-cool)
 - [Getting Set Up](#getting-set-up)
-- [Running It Locally](#running-it-locally)
 - [How to Use Flora](#how-to-use-flora)
 - [Wanna Help?](#wanna-help)
 - [Legal Stuff](#legal-stuff)
@@ -36,10 +35,27 @@ Super simple. Here’s the deal:
 
 ---
 
-## Running It Locally
-Want to check out the code? Here’s how to get Flora Marketplace running on your own setup:
+## How to Use Flora
+- **Explore Plants** 🌱: Scroll, browse, and fall in love with your next plant.
+- **Sell Your Own**: Got extra plants? List them for sale and make some cash! 💸
+- **Level Up Plant Care**: Access easy, real-talk care guides.
+- **Connect With Others**: Share your plant wins, troubleshoot with the community, and stay inspired. ✨
 
-1. **Clone the Repo**
-   ```bash
-   git clone https://github.com/username/flora-marketplace.git
-   cd flora-marketplace
+---
+
+## Wanna Help?
+Join us! We’re all about building Flora together.
+1. **Fork** this repo.
+2. **Make Your Edits**.
+3. **Send a Pull Request** – we’ll give it a look ASAP.
+
+---
+
+## Legal Stuff
+Licensed under MIT. Read the `LICENSE` file for more info.
+
+---
+
+**Flora Marketplace** – *Good vibes, green leaves*. 🌱🌞  
+
+Go get your plant on! 🛒
