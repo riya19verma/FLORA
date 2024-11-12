@@ -1,176 +1,215 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-
-    
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
 }
-
-img{
-    width: 100%;
+body{
     height: 100vh;
+    width: 100%;
+    background: #000000;
+    color: rgb(255, 251, 251);
+  
+}
+.background{
+    background: url(bg2.jpg) no-repeat;
+    background-position: center;
+    background-size:cover ;
+    height: 100vh;
+    width: 100%;
+    filter: blur(10px);
 }
 
-.main{
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 66%;
+  height: 574px;
+  margin-top: 13px;
+  background: url(backgroun3.jpg) no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 140px;
+  overflow: hidden;
+
     
+    
+}
+.item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    color: #000000;
+    background: transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+
+
+}
+.item .logo{
+    color: #000000;
+    font-size: 30px;
+
+}
+.text-item h2{
+    font-size: 40px;
+    line-height: 1;
+    color: #ffffff;
+}
+.text-item p{
+    font-size: 16px;
+    margin: 20px 0;
+    color: #ffffff;
+}
+.social-icon a i{
+    color: #000000;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.social-icon a:hover i{
+    transform: scale(1.2);
+}
+.container .login-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    color: #000000;
+    backdrop-filter: blur(10px);
+}
+
+.login-section .form-box{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    .sofadi-one-regular {
-        font-family: "Sofadi One", system-ui;
-        font-weight: 400;
-        font-style: normal;
-      }
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      
+    width: 100%;
+    height: 100%;
+    
 }
-.box{
-    background-color: rgb(255, 254, 254);
+.login-section .form-box.register{
+    transform: translateX(430px);
+    transition: transform .6s ease;
+    transition-delay: 0s;
+}
+.login-section.active .form-box.register{
+    transform: translateX(0px);
+    transition-delay: .7s;
+}
+
+.login-section .form-box.login{
+    transform: translateX(0px);
+    transition: transform .6s ease;
+    transition-delay: 0.7s;
+}
+.login-section.active .form-box.login{
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+
+
+.login-section .form-box h2{
+    text-align: center;
+    font-size: 25px;
+}
+
+.form-box .input-box{
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid#000000;
+    margin: 30px 0;
+    position: relative;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+
+
+}
+.input-box label{
     position: absolute;
-    height: 61vh;
-    width: 30vw;
-     /* position: relative; */
-    justify-content: center; 
-    /* align-items: center; */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600px;
+    pointer-events: none;
+    transition: .5s ease;
+
+}
+.input-box .icon{
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+.input-box input:focus~ label,
+.input-box input:valid~ label{
+    top: -5px;
+}
+.remember-password{
+    font-size: 14px;
+    font-weight: 500;
+    margin: -15px 0 15px ;
     display: flex;
-   /* bottom: 739px;
-  left: 681px; */
-    opacity: 0.8; 
-    border: 2px solid rgb(0, 0, 0);  
-    border-radius: 38px;
-    box-shadow: 10px 10px 5px black ;
-  
+    justify-content: space-between;
+}
+.remember-password label input{
+    accent-color: #000000;
+    margin-right: 3px;
 
 }
-
-.log{
-    /* background-color: white; */
-    color: rgb(0, 0, 0);
-    font-size: 51px;
-  line-height: 1.8;
-  letter-spacing: 0.068em;
-  font-weight: 500;
-  font-style: normal;
-  position: relative;
-  left: 21px;
-  text-decoration:underline;
-
+.remember-password a{
+    color: #000000;
+    text-decoration: none;
+}
+.remember-password a:hover{
+    text-decoration: underline;
+}
+.btn{
+    background: #000000;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 124px;
+    cursor: pointer;
+    background: #f72d7a;
+    font-size: 16px;
+    color: #000000;
+    box-shadow: rgba(0,0,0,0.4);
+    
 
 }
-
-.txt{
-    color: rgb(0, 0, 0);
-  position: relative;
-  /* top: 154px; */
-  right: 108px;
-
+.create-account{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
 }
-
-#inp{
-    /* background-color: hsl(0, 0%, 2%); */
-    display: flex;
-    flex-direction: row;
-    position: relative;
-  right: 107px;
-  top: 4px;
-  width: 201%;
-  color:rgb(0, 0, 0);
-  border: none;
-  background: transparent;
-  border-bottom: 4px solid black;
-  outline: none;
-
-
+.create-account p a{
+    color: #8400ff;
+    font-weight: 600px;
+    text-decoration: none;
 }
-
-
-.txt1{
-    color: rgb(0, 0, 0);
-  position: relative;
-  top: 45px;
-  right: 108px;
-
+.create-account p a:hover{
+    text-decoration: underline;
 }
-
-#inp1{
-    /* background-color: hsl(0, 0%, 2%); */
-    display: flex;
-    flex-direction: row;
-    position: relative;
-  right: 108px;
-  top: 51px;
-  width: 201%;
-  border:none;
-  color:rgb(0, 0, 0);
-  background: transparent;
-  border-bottom: 4px solid black;
-  outline: none;
-
-}
-
-.box2{
-    position: relative;
-    top: 38px;
-}
-
-.login_box{
-  background-color: rebeccapurple;
-  color: white;
-  height: 8vh;
-  width: 129%;
-  z-index: 2;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 120px;
-  right: 39px;
-  opacity: 2;
-  border-radius: 17px;
-  border: 3px solid black;
-  font-size: 28px;
-  line-height: 1.4;
-  letter-spacing: 0.208em;
-  font-weight: 100;
-  font-style: normal;
-
-
-
-}
-
-.login_box:hover{
-    background-color: rgb(125, 227, 10);
-    color: whitesmoke;
-}
-
-.acct{
-    position: relative;
-  top: 126px;
-  right: 7px;
-
-}
-
-.icons{
-    position: relative;
-  top: 217px;
-  left: 38px;
-  font-size: 21px;
-  line-height: 0.9;
-  letter-spacing: 0.361em;
-  font-weight: 900;
-  font-style: normal;
-
-
-}
-
-.copyright{
-    color: black;
-    z-index: 2;
-  position: relative;
-  top: 219px;
-  left: 68px;
-
-}
-
