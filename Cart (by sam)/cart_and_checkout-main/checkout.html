@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    
+<div class="container">
+    <div class="checkoutLayout">
+        <div class="returnCart">
+            <a href="/">keep shopping</a>
+            <h1>List Product in Cart</h1>
+            <div class="list">
+                <div class="item">
+                    <img src="images/1.webp">
+                    <div class="info">
+                        <div class="name">PRODUCT 1</div>
+                        <div class="price">$22/1 product</div>
+                    </div>
+                    <div class="quantity">5</div>
+                    <div class="returnPrice">$433.3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <h1>Checkout</h1>
+            <div class="form">
+                <div class="group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+    
+                <div class="group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+    
+                <div class="group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address">
+                </div>
+    
+                <div class="group">
+                    <label for="country">state</label>
+                    <select name="state" id="state">
+                        <option value="">Choose..</option>
+                        <option value="gujarat">Gujarat</option>
+                        
+                        <option value="madhya-pradesh">Madhya Pradesh</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        
+                        <option value="tamil-nadu">Tamil Nadu</option>
+                        
+                        <option value="uttar-pradesh">Uttar Pradesh</option>
+                      
+                        <option value="west-bengal">West Bengal</option>
+                    </select>
+                    
+                </div>
+    
+                <div class="group">
+                    <label for="cities">Cities</label>
+                    <select name="state" id="state">
+
+                        <option value="">Choose State...</option>
+                        
+                        <!-- Uttar Pradesh -->
+                        <optgroup label="Uttar Pradesh">
+                            <option value="lucknow">Lucknow</option>
+                            <option value="varanasi">Varanasi</option>
+                            <option value="kanpur">Kanpur</option>
+                            <option value="prayagraj">Prayagraj</option>
+                        </optgroup>
+                        
+                        <!-- Maharashtra -->
+                        <optgroup label="Maharashtra">
+                            <option value="mumbai">Mumbai</option>
+                            <option value="pune">Pune</option>
+                            <option value="nashik">Nashik</option>
+                            <option value="thane">Thane</option>
+                        </optgroup>
+                        
+                        <!-- Tamil Nadu -->
+                        <optgroup label="Tamil Nadu">
+                            <option value="chennai">Chennai</option>
+                            <option value="coimbatore">Coimbatore</option>
+                            <option value="vellore">Vellore</option>
+                            <option value="madurai">Madurai</option>
+                        </optgroup>
+                        
+                        <!-- West Bengal -->
+                        <optgroup label="West Bengal">
+                            <option value="kolkata">Kolkata</option>
+                            <option value="darjeeling">Darjeeling</option>
+                            <option value="howrah">Howrah</option>
+                            <option value="siliguri">Siliguri</option>
+                        </optgroup>
+                        
+                        <!-- Gujarat -->
+                        <optgroup label="Gujarat">
+                            <option value="ahmedabad">Ahmedabad</option>
+                            <option value="vadodara">Vadodara</option>
+                            <option value="surat">Surat</option>
+                            <option value="bhavnagar">Bhavnagar</option>
+                        </optgroup>
+                        
+                        <!-- Madhya Pradesh -->
+                        <optgroup label="Madhya Pradesh">
+                            <option value="bhopal">Bhopal</option>
+                            <option value="ujjain">Ujjain</option>
+                            <option value="rewa">Rewa</option>
+                            <option value="ratlam">Ratlam</option>
+                        </optgroup>
+                        
+                        <!-- Haryana -->
+                        <optgroup label="Haryana">
+                            <option value="noida">Noida</option>
+                            <option value="gurugram">Gurugram</option>
+                            <option value="dwarka">Dwarka</option>
+                        </optgroup>
+                    </select>
+                    
+                        
+                        
+                
+                        
+                </div>
+            </div>
+            <div class="return">
+                <div class="row">
+                    <div>Total Quantity</div>
+                    <div class="totalQuantity">70</div>
+                </div>
+                <div class="row">
+                    <div>Total Price</div>
+                    <div class="totalPrice">$900</div>
+                </div>
+            </div>
+            <button class="buttonCheckout">CHECKOUT</button>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <video id="checkoutVideo" src="Animation - 1732874580678.webm" autoplay muted></video>
+                <button class="close-modal">&times;</button>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<script src="checkout.js"></script>
+<script src="bruh.js"></script> 
+
+</body>
+</html>
