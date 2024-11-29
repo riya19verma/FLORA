@@ -261,11 +261,103 @@ if (mysqli_num_rows($result) > 0) {
         $plantName = $row['color_name']." ".$row['plantName'];  // Get plant name from the 'plantName' field
         $price = $row['price'];  // Get price from the 'price' field
 
-        echo "<div class='card'>
+        echo "
+        <div class='card'>
         <img src='$imagePath' alt='$plantName' height='150px'>
         <p><b>$plantName</b></p>  <!-- Plant name -->
         <p class='price'>Rs. $price</p>  <!-- Price -->
+        <div class='card_data'>
+                    <span class='card_desc'>
+                        <BUTTON class='view_det' onclick='popup()'>VIEW DETAILS</BUTTON>
+                    </span>
+                </div>
       </div>";
+
+      $sub_query1 = "SELECT * from supplier where supplier_Code = '".$table."';";
+      $res1 = mysqli_fetch_assoc(mysqli_query($conn,$sub_query1));
+      $sub_query2 = "SELECT Color_Name from plantsimages natural join plant_colors where Image = '".$row['Image']."';";
+      $res2 = mysqli_fetch_assoc(mysqli_query($conn,$sub_query2));
+      $sub_query3 = "SELECT Flowering,type,Indoor,Winter,Summer,Monsoon,Fall,Spring from masterplantstable natural join planttype where plantName = '".$plantName."' and planttype.typeID = masterplantstable.plantType;";
+      $res3 = mysqli_fetch_assoc(mysqli_query($conn,$sub_query3));
+
+      if(isset($res3['Flowering']))
+      {
+        $flowering = "Flowering";
+      }
+      else
+      {
+        $flowering = "Non FLowering";
+      }
+
+      if(isset($res3['Indoor']))
+      {
+        $indoor = "Indoor";
+      }
+      else
+      {
+        $indoor = "Outdoor";
+      }
+
+      $season = "";
+
+      if(isset($res3['Winter']))
+      {
+        $season .= " Winter";
+      }
+      if(isset($res3['Summer']))
+      {
+        $season .= " Summer";
+      }
+      if(isset($res3['Monsoon']))
+      {
+        $season .= " Monsoon";
+      }
+      if(isset($res3['Fall']))
+      {
+        $season .= " Fall";
+      }
+      if(isset($res3['Spring']))
+      {
+        $season .= " Spring";
+      }
+
+      if(isset($res2['Color_Name']))
+      {
+        $color = $res2['Color_Name'];
+      }
+      else
+      {
+        $color = "Not Available";
+      }
+
+      if(isset($res3['type']))
+      {
+        $type = $res3['type'];
+      }
+      else
+      {
+        $type = "Not Available";
+      }
+
+      echo"
+      <div class = 'view1' id = 'view'>
+        <div class = 'overlay' onclick = 'popup()'>
+          <div class = 'content'>
+          <div class='close' onclick='popup()'>&times;</div>
+            <p>$plantName</p>
+            <p><b>Price : </b>Rs. $price</p>
+            <p><b>Color : </b>".$color."</p>
+            <p><b>Flowering : </b>".$flowering."</p>
+            <p><b>Type : </b>".$type."</p>
+            <p><b>Indoor : </b>".$indoor."</p>
+            <p><b>Season : </b>".$season."</p>
+            <p><b>SUPPLIER DETAILS : <br></b></p>
+            <p><b>Name : </b>".$res1['Supplier_Name']."</p><br>
+            <p><b>Address : </b>".$res1['Address']."</p><br>
+          </div>
+        </div>
+      </div>
+      ";
     }
 } else {
     echo "No plants found in the database.";
@@ -329,6 +421,10 @@ mysqli_close($conn);
 
     function togglePopUp(){
       document.getElementById("popup1").classList.toggle("active");
+    }
+
+    function popup(){
+      document.getElementById("view").classList.toggle("active");
     }
     
     function updatePlace()

@@ -77,6 +77,8 @@ td{
     background-color: #ffffff; /* Light background for cards */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
@@ -181,3 +183,129 @@ td{
     transform: translate(-50%,-50%) scale(1);
 }
 
+.catalogue .card .card_data{
+    width: 100px;
+    background-color: rgb(247, 240, 145);
+    padding: 1.5rem 2rem;
+    box-shadow:  3px 3px 8px 0px #9f9f9f;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -8rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.catalogue .card .card_data .card_desc{
+    font-size: small;
+    margin-bottom: .25rem;
+}
+
+.catalogue .card:hover .card_data{
+    animation: showdata 1s forwards;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.catalogue .card:hover{
+    animation: removeoverflow 2s forwards;
+}
+
+.catalogue .card:not(:hover){
+    animation: showoverflow 2s forwards;
+}
+
+.catalogue .card:not(:hover) .card_data{
+    animation: removedata 1s forwards;
+}
+@keyframes showdata {
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes removeoverflow{
+    to{
+        overflow: visible;
+    }
+} 
+
+@keyframes removedata {
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes showoverflow {
+    0%{
+        overflow: visible;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+.view1{
+    display : none;    
+}
+.view1 .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width : 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.view1 .content{
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.7);
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    z-index: 2;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.view1 .close{
+    cursor: pointer;
+    position : absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.view1 .active .overlay{
+    display: block;
+}
+
+.view1 .active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}

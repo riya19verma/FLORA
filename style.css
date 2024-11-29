@@ -15,6 +15,7 @@ table{
     position: fixed;
     background-color: rgb(246, 246, 246);
     width : 100%;
+    color : chocolate;
     z-index: 100;
 }
 
@@ -27,6 +28,7 @@ table{
     justify-items: right;
 }
 td{
+    color: chocolate;
     align-items: center;
 }
 
@@ -35,6 +37,18 @@ td{
     text-align: center;
     transition: transform 0.5s;
     margin-top: 0%;
+    color :  chocolate;
+}
+
+#nav>a
+{
+    color :  chocolate;
+}
+
+#nav button{
+    background-color: rgb(246, 246, 246);
+    border: none;
+    color: chocolate;
 }
 
 #nav:hover{

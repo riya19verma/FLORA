@@ -167,17 +167,17 @@ mysqli_close($conn);
   <div>
     <b>Contributors</b>
     <ul>
-      <li>Samarth Ralph<br>-----------------</li>
-      <li>Vihan Tandon<br>-----------------</li>
+      <li>Samarth Ralph</li>
+      <li>Vihan Tandon</li>
       <li>Riya Verma</li>
     </ul>
   </div>
   <div>
     <b>Products</b>
     <ul>
-      <li><a href = "plants.html">Plants</a><br>-----------------</li>
-      <li><a href = "accessories.html">Accessories</a><br>-----------------</li>
-      <li><a href = "Seeds.html">Seeds</a><br>-----------------</li>
+      <li><a href = "plants.html">Plants</a></li>
+      <li><a href = "accessories.html">Accessories</a></li>
+      <li><a href = "Seeds.html">Seeds</a></li>
       <li><a href = "PlantCare.html">Plant Care Products</a></li>
     </ul>
   </div>
@@ -185,8 +185,8 @@ mysqli_close($conn);
     <b>Get in Touch</b><br>
     Call : +91 XXXXXXXXX<br>
     Email : <ul>
-      <li><a href = "mailto:23803003@mail.jiit.ac.in">23803022@mail.jiit.ac.in</a><br>-----------------</li>
-      <li><a href = "mailto:23803015@mail.jiit.ac.in">23803022@mail.jiit.ac.in</a><br>-----------------</li>
+      <li><a href = "mailto:23803003@mail.jiit.ac.in">23803022@mail.jiit.ac.in</a></li>
+      <li><a href = "mailto:23803015@mail.jiit.ac.in">23803022@mail.jiit.ac.in</a></li>
       <li><a href = "mailto:23803022@mail.jiit.ac.in">23803022@mail.jiit.ac.in</a></li>
     </ul>
   </div>
