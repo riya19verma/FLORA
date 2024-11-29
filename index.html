@@ -176,6 +176,13 @@
   
  <h2><center>SHOP THE LOOK</center></h2>
 
+ <div class="slider">
+  <img src="slider1.jpg" alt="Image 1">
+  <img src="slider2.jpg" alt="Image 2">
+  <img src="slider3.jpg" alt="Image 3">
+  <img src="slider4.jpg" alt="Image 4">
+</div>
+ 
  
  <div class = "page_divider">
   <img src = "page divider.png">
@@ -184,21 +191,7 @@
   <img src = "page divider.png">
 </div>
 
-<h2><center>BENEFITS OF INDOOR PLANTS</center></h2>
 
-<div class = "indoor_plants">
-  <div class = "p1">
-    Indoor plants may help reduce stress levels
-
-  </div>
-</div>
-  
-<div class = "page_divider">
-  <img src = "page divider.png">
-  <img src = "page divider.png">
-  <img src = "page divider.png">
-  <img src = "page divider.png">
-</div>
 
 <h2><center>JOIN US <br> BECOME A PLANT PARENT</center></h2>
 <br>
@@ -312,6 +305,33 @@
   dropdownContainer.appendChild(dropdown); // Add the new dropdown to the container
 
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slider img");
+  let currentIndex = 0;
+
+  const showSlide = (index) => {
+    // Reset all slides
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) {
+        slide.classList.add("active");
+      }
+    });
+  };
+
+  const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % slides.length; // Loop back to the start
+    showSlide(currentIndex);
+  };
+
+  // Initialize the slider
+  showSlide(currentIndex);
+
+  // Automatically change slides every 3 seconds
+  setInterval(nextSlide, 3000);
+});
+
 
   </script>
 </body>
